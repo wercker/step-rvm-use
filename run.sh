@@ -13,7 +13,7 @@ else
     info "Going to use Ruby version $WERCKER_RVM_USE_VERSION";
 fi
 
-local OPTIONS=""
+OPTIONS=""
 
 if [ "$WERCKER_RVM_USE_CREATE" = "true" ]; then
     $OPTIONS="$OPTIONS --create";
