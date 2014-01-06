@@ -27,5 +27,6 @@ $rvm_command
 if [[ $? -ne 0 ]]; then
     fail "$rvm_command failed"
 else
+    info "rvm current: $(rvm current)"
     success "finished $rvm_command"
 fi
