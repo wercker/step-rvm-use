@@ -1,13 +1,13 @@
 #!/bin/sh
 
-if ! type rvm &> /dev/null ; then
+if ! type rvm &> /dev/null; then
     fail "RVM is not installed";
 else
     info "RVM is installed: $(rvm version)";
     info "Installed Rubies: $(rvm list)"
 fi
 
-if [ -n "$WERCKER_RVM_USE_VERSION" ]; then
+if [ -z "$WERCKER_RVM_USE_VERSION" ]; then
     fail "version is not set";
 else 
     info "Going to use Ruby version $WERCKER_RVM_USE_VERSION";
@@ -15,7 +15,7 @@ fi
 
 local OPTIONS=""
 
-if [ "$WERCKER_RVM_USE_CREATE" = "true" ] ; then
+if [ "$WERCKER_RVM_USE_CREATE" = "true" ]; then
     $OPTIONS="$OPTIONS --create";
 fi
 
