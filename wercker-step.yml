@@ -1,5 +1,5 @@
 name: rvm-use
-version: 0.0.4
+version: 1.0.0
 description: Activate a Ruby version using RVM
 keywords:
   - rvm
