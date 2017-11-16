@@ -1,0 +1,15 @@
+name: rvm-use
+version: 1.1.0
+summary: Activate a Ruby version using RVM
+tags:
+  - rvm
+  - use
+  - ruby
+properties:
+- name: version
+  type: string
+  required: true
+- name: create
+  type: string
+  required: false
+  default: false
